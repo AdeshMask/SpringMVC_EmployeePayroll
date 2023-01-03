@@ -1,20 +1,21 @@
-package com.employeeDao;
+package com.employee.employeeDao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.model.Employee;
+import com.employee.model.Employee;
 
-@Transactional
+@Repository
 public class EmployeeDao {
 
 	@Autowired
 	HibernateTemplate hibernateTemplate;
 	
 	@Transactional
-	public Employee saveUser(Employee emp) {
-		Employee employee =(Employee) this.hibernateTemplate.save(emp);	
-		return employee;
+	public int createUser(Employee employee) {
+		int id = (Integer) this.hibernateTemplate.save(employee);	
+		return id;
 	}
 }
