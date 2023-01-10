@@ -35,19 +35,19 @@
 				<label class="label text" for="profile">Profile image</label>
 				<div class="profile-radio-content">
 					<label> <input type="radio" id="profile1"
-						value="../assets/profile-images/Ellipse -3.png" name="profilePic">
+						value="<c:url value="/resources/images/Ellipse -3.png" />" name="profilePic">
 						<img class="profile" id="image1"
 						src='<c:url value="/resources/images/Ellipse -3.png" />'>
 					</label> <label> <input type="radio" id="profile2"
-						value="../assets/profile-images/Ellipse -1.png" name="profilePic">
+						value="<c:url value="/resources/images/Ellipse -3.png" />" name="profilePic">
 						<img class="profile" id="image2"
 						src='<c:url value="/resources/images/Ellipse -3.png" />'>
 					</label> <label> <input type="radio" id="profil3"
-						value="../assets/profile-images/Ellipse -8.png" name="profilePic">
+						value="<c:url value="/resources/images/Ellipse -8.png" />" name="profilePic">
 						<img class="profile" id="image3"
 						src='<c:url value="/resources/images/Ellipse -8.png" />'>
 					</label> <label> <input type="radio" id="profile4"
-						value="../assets/profile-images/Ellipse -7.png" name="profilePic">
+						value="<c:url value="/resources/images/Ellipse -7.png" />" name="profilePic">
 						<img class="profile" id="image4"
 						src='<c:url value="/resources/images/Ellipse -7.png" />'>
 					</label>
@@ -92,8 +92,8 @@
 				</div>
 			</div>
 			<div class="row-content">
-				<label for="notes" class="label text">Notes</label>
-				<textarea id="notes" class="input" name="notes" placeholder=""
+				<label for="note" class="label text">Notes</label>
+				<textarea id="note" class="input" name="note" placeholder=""
 					style="height: 100px"></textarea>
 			</div>
 			<div class="buttonParent">

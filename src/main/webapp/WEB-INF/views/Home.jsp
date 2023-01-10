@@ -1,7 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@page isELIgnored="false"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,28 +33,35 @@
 			<div class="table-main">
 				<table id="table-display" class="table">
 					<tr>
-						<th></th>
+						<th>...</th>
 						<th>Name</th>
 						<th>Gender</th>
 						<th>Department</th>
 						<th>Salary</th>
+						<th>Note</th>
 						<th>Start Date</th>
 						<th>Actions</th>
 					</tr>
-					<tr>
-						<td><img class="profile" alt=""
-							src="../assests/profile-images/${employee.profilePic}"></td>
-						<td>${employee.name }</td>
-						<td>${employee.gender }</td>
-						<td><div class='Dept-label'>${employee.department }</div></td>
-						<td>${employee.salary }</td>
-						<td>${employee.date }</td>
-						<td><img id="1" onclick="remove(this)"
-							src='<c:url value="/resources/icons/delete-black-18dp.svg" />'
-							alt="delete"> <img id="1" onclick="update(this)"
-							src='<c:url value="/resources/icons/create-black-18dp.svg" />'
-							alt="edit"></td>
-					</tr>
+					<c:forEach items="${employee }" var="emp">
+						<tr>
+							<td><a href="delete/${emp.id }"><img class="profile"
+									alt="" src='${emp.profilePic }' /></a>
+							<td>${emp.name }</td>
+							<td>${emp.gender }</td>
+							<td><div class='Dept-label'>${emp.department }</div></td>
+							<td>${emp.salary }</td>
+							<td>${emp.note }</td>
+							<td>${emp.date }</td>
+							<td>
+							<a href="delete/${emp.id }"> 
+								<img src='<c:url value="/resources/icons/delete-black-18dp.svg" />'
+									alt="edit"></a> 
+							<a href="update/${emp.id }"> 
+								<img src='<c:url value="/resources/icons/create-black-18dp.svg" />'
+									alt="edit"></a>
+							</td>
+						</tr>
+					</c:forEach>
 				</table>
 			</div>
 		</form>

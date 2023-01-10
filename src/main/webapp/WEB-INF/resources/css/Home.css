@@ -136,7 +136,7 @@ td img :first-child {
     margin-right: 10px;
 }
 
-td img {
+.td .img {
     cursor: pointer;
 }
 .dept-label {

@@ -46,8 +46,7 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 		<property name="annotatedClasses">
 			<list>
 				<value>
-					com.employee.model.Employee
-					
+					com.employee.model.Employee	
 				</value>
 			</list>
 		</property>
